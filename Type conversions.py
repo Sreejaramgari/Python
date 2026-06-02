@@ -1,6 +1,6 @@
-name=input("Enter Your name :")
+name = input("Enter Your name :")
 #implicit type conversion
-age=int(input("Enter your age :"))
+age=int(input("enter your age :"))
 age=age+1.0
 a = 5      # int
 b = 2.5    # float
@@ -24,7 +24,6 @@ num=12
 print(float(num))
 print(str(num))
 print(bool(num))
-
 
 
 
