@@ -1,45 +1,27 @@
-#Creating new file
-#try:
-#    with open('sample.txt','w') as file:
-#        print("new file created")
+#dictionary comprehension finding even and odd elements
+nums = [1, 2, 3, 4, 5, 6]
+result = {
+    "even": [x for x in nums if x % 2 == 0],
+    "odd": [x for x in nums if x % 2 != 0]
+}
+print(result) 
 
-#except Exception as e:
-#   print("Error:{e}")
+#return duplicate elements in list
+nums = list(map(int, input().split()))
+l1 = []   # to store seen elements
+l2 = []   # to store duplicates
+for i in nums:
+    if i in l1:
+        if i not in l2:
+            l2.append(i)
+    else:
+        l1.append(i)
+print(l2)
 
-#Writing content into a file
-#try:
-#    with open('sample.txt','w') as file:
-#       string = """Hi hello 
-#        how are you"""
-#       file.write(string)
-#       lines = ['i am a python student\n','at codegnan\n']
-#       file.writelines(lines)
-#
-#except Exception as e:
-#   print("Error:{e}")
-
-#reading content from file
-#try:
-#    with open('sample.txt','r') as file:
-#       content = file.read()
-#       content1 = file.read()
-#       print(content)
-#       print("content1:",content1)
-#       file.seek(0)
-#       lines = file.readlines()
-#       print(lines)
-#except Exception as e:
-#  print(f"Error:{e}")
-
-#appending a+
-try:
-    with open('sample.txt','a+') as file:
-       content = file.read()
-       content1 = file.read()
-       print(content)
-       print("content1:",content1)
-       file.seek(0)
-       lines = file.readlines()
-       print(lines)
-except Exception as e:
-    print(f"Error:{e}")
+#target equal to sum 
+target = int(input())
+nums = list(map(int, input().split()))
+for i in range(len(nums)):
+    for j in range(i + 1, len(nums)):
+        if nums[i] + nums[j] == target:
+            print(nums[i], nums[j])
